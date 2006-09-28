@@ -71,6 +71,9 @@ xy*  fast_nonmax(const byte* im, int xsize, int ysize, xy* corners, int numcorne
 
 	if(numcorners < 5)
 	{
+		free(row_start);
+		free(scores);
+		free(nonmax_corners);
 		return 0;
 	}
 
@@ -169,5 +172,8 @@ xy*  fast_nonmax(const byte* im, int xsize, int ysize, xy* corners, int numcorne
 	}
 
 	*numnx = num_nonmax;
+
+	free(row_start);
+	free(scores);
 	return nonmax_corners;
 }
