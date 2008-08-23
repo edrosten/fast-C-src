@@ -7,7 +7,7 @@ the rest of your project.
 
 With gcc, for extra speed, first compile the code with "-fprofile-arcs" as an
 option. Then, run the program and recompile with 
-"-fbranch-probabilities -freorder-functions -ftsp-ordering".
+"-fbranch-probabilities".
 This can make a significant improvement in speed.
 
 
