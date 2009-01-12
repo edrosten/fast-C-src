@@ -5895,12 +5895,11 @@ xy* fast9_detect(const byte* im, int xsize, int ysize, int stride, int b, int* r
 			{
 				rsize*=2;
 				ret_corners = (xy*)realloc(ret_corners, sizeof(xy)*rsize);
-
-				ret_corners[num_corners].x = x;
-				ret_corners[num_corners].y = y;
-				num_corners++;
-				
 			}
+			ret_corners[num_corners].x = x;
+			ret_corners[num_corners].y = y;
+			num_corners++;
+				
 		}
 	
 	*ret_num_corners = num_corners;
